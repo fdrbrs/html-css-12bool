@@ -1,7 +1,10 @@
+/* Common RUles */
+
 .container {
     width: 65%;
     margin: auto;
 }
+
 
 .container [class*="col-"] {
     background-color: #FFC0CB;
@@ -9,6 +12,8 @@
     height: 200px;
     text-align: center;
 }
+
+/* Columns Content */
 
 .col-1::after{
     content: "1 col";
@@ -28,12 +33,6 @@
     vertical-align: middle;
 }
 
-.row>.col-6>.col-6::after{
-    content: "6 col";
-    line-height: 200px;
-    vertical-align: middle;
-}
-
 .col-8::after{
     content: "8 col";
     line-height: 200px;
@@ -46,12 +45,32 @@
     vertical-align: middle;
 }
 
+/* Nested Columns Content */
+
+.nest {
+    padding: 5px;
+}
+
+.row>.col-6>.col-6::after{
+    content: "Nested 6 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.row>.col-6>.col-8::after{
+    content: "Nested 8 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.row>.col-6>.col-2::after{
+    content: "Nested 2 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
 .col-6 > [class*="col-"]{
     background-color: #F07F80;
     border: 1px solid white;
     height: 100%;
-}
-
-.nest {
-    padding: 5px 5px 5px 5px;
 }

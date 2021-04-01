@@ -1,0 +1,57 @@
+.container {
+    width: 65%;
+    margin: auto;
+}
+
+.container [class*="col-"] {
+    background-color: #FFC0CB;
+    border: 2px solid black;
+    height: 200px;
+    text-align: center;
+}
+
+.col-1::after{
+    content: "1 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.col-2::after{
+    content: "2 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.col-6:nth-child(4)::after {
+    content: "6 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.row>.col-6>.col-6::after{
+    content: "6 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.col-8::after{
+    content: "8 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.col-12::after{
+    content: "12 col";
+    line-height: 200px;
+    vertical-align: middle;
+}
+
+.col-6 > [class*="col-"]{
+    background-color: #F07F80;
+    border: 1px solid white;
+    height: 100%;
+}
+
+.nest {
+    padding: 5px 5px 5px 5px;
+}
